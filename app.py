@@ -1,3 +1,8 @@
+import os
+
+os.makedirs(os.path.expanduser("~/.streamlit"), exist_ok=True)
+os.environ["STREAMLIT_CONFIG_DIR"] = os.path.expanduser("~/.streamlit")
+
 import streamlit as st
 import pandas as pd
 import joblib
@@ -75,4 +80,5 @@ def main():
     """)
 
 if __name__ == "__main__":
+
     main()
